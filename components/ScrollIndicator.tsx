@@ -10,7 +10,7 @@ export default function ScrollIndicator() {
         {/* Le point qui s'anime */}
         <motion.div
           animate={{
-            y: [0, 13, 0], // Mouvement vertical : départ -> bas -> départ
+            y: [0, 12, 0], // Mouvement vertical : départ -> bas -> départ
           }}
           transition={{
             duration: 1.5,
