@@ -34,7 +34,10 @@ export default function RootLayout({
             Top (57px) + Height (51px) = 108px.
             On ajoute un peu de marge (ex: 140px) pour que le Hero ne colle pas au header.
         */}
-        <main className="min-h-screen relative pt-[140px]">
+        <main className="min-h-screen relative pt-[140px]
+            /* Padding horizontal progressif */
+            px-6 sm:px-16 md:px-[115px]
+        ">
           {children}
         </main>
 

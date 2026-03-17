@@ -1,18 +1,12 @@
 import ProjectCard from '@/components/ProjectCard';
+import HeroSection from "@/components/Hero";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-20">
+    <main className="mx-auto py-30">
       {/* Hero Section */}
-      <section className="mb-32">
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-          Hi, I'm <span className="text-gray-400">Sullivan ATCHAHOUÉ.</span><br />
-          I'm UI/UX Designer.
-        </h1>
-        <p className="mt-6 text-gray-500 max-w-lg">
-          Passionately creating impactful digital experiences, rooted in user needs.
-        </p>
-      </section>
+      < Hero />
 
       {/* Selected Works Section */}
       <section>
@@ -22,8 +16,8 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <ProjectCard title="MoMo" category="Redesign of MoMo UI" image="/momo.png" />
-          <ProjectCard title="Medi Reminder" category="Mobile App" image="/medi.png" />
+          <ProjectCard title="MoMo" category="Redesign of MoMo UI" image="/ressourses/momo.png" />
+          <ProjectCard title="Medi Reminder" category="Mobile App" image="/ressourses/medi_reminder.png" />
           {/* Ajoute les autres projets ici */}
         </div>
       </section>
