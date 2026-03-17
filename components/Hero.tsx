@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section className="mt-[60px] mb-32">
       <div className="max-w-[950px] min-h-[94px] text-[#6E6E6E]">
-        <h1 className="font-geist text-[64px] font-medium leading-[100%] tracking-normal">
+        <h1 className="font-geist text-[26px] sm:text-[28px] md:text-[64px] font-medium leading-[100%] tracking-normal">
           Hi, I'm <span className="text-[#FFFFFF] font-medium">Sullivan ATCHAHOUÉ.</span>
           <br />
           I'm{" "}
@@ -41,7 +41,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.4, ease: "linear" }}
                 className={`font-medium col-start-1 row-start-1 ${
                   isDesigner ? "text-[#FFFFFF]" : "text-[#6E6E6E]"
                 }`}

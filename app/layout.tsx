@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,14 +27,15 @@ export default function RootLayout({
     <html lang="fr" className="scroll-smooth">
       <body className={`${inter.variable} ${geist.variable} font-sans bg-[#0F0F0F] text-white antialiased`}>
 
-        <Header />
+        <Navbar />
 
         {/*
             Calcul du padding-top :
             Top (57px) + Height (51px) = 108px.
             On ajoute un peu de marge (ex: 140px) pour que le Hero ne colle pas au header.
         */}
-        <main className="min-h-screen relative pt-[140px]
+        <main className="min-h-screen relative
+            pt-[20px] sm:pt-[40px] md:pt-[165px]
             /* Padding horizontal progressif */
             px-6 sm:px-16 md:px-[115px]
         ">

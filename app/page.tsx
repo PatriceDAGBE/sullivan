@@ -4,15 +4,15 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="mx-auto py-30">
+    <main className="mx-auto">
       {/* Hero Section */}
       < Hero />
 
       {/* Selected Works Section */}
       <section>
         <div className="mb-12">
-          <h2 className="text-3xl font-bold">Selected Works</h2>
-          <p className="text-gray-500">A curated selection of projects solving meaningful problems.</p>
+          <h2 className="text-[72px] font-medium">Selected Works</h2>
+          <p className="text-light text-[38px] mt-10">A curated selection of projects <br/>solving meaningful problems.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
