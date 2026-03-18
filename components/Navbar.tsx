@@ -37,14 +37,13 @@ export default function Navbar() {
             {/* Liens — visibles seulement quand open */}
             {open && (
               <div>
+                <div className='border-b border-[#6E6E6E]/40'></div>
                 {links.map((link, i) => (
                   <Link
                     key={link.label}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className={`flex items-center justify-between px-4 py-4 text-[#f0f0f0] hover:text-[#c8f04d] transition-colors duration-200 group ${
-                      i == 0 ? "border-t border-[#6E6E6E]/40" : ""
-                    }`}
+                    className={`flex items-center justify-between px-4 my-4 text-[#f0f0f0] hover:bg-[#D3AF4A] hover:text-[#6E6E6E] transition-colors duration-200 group `}
                   >
                     <span className="text-base font-medium">{link.label}</span>
                     <ArrowUpRight className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-all duration-200" strokeWidth={1.5} />
