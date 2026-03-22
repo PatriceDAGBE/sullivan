@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,12 +36,13 @@ export default function RootLayout({
             On ajoute un peu de marge (ex: 140px) pour que le Hero ne colle pas au header.
         */}
         <main className="min-h-screen relative
-            pt-[20px] sm:pt-[40px] md:pt-[165px]
-            /* Padding horizontal progressif */
-            px-6 sm:px-16 md:px-[115px]
+          pt-[20px] sm:pt-[40px] md:pt-[165px]
+          px-6 sm:px-12 md:px-[80px] lg:px-[115px]
         ">
           {children}
         </main>
+
+        <Footer />
 
       </body>
     </html>
