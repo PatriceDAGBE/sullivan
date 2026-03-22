@@ -15,7 +15,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Sullivan ATCHAHOUÉ | Portfolio",
+  title: "Sullivan ATCHAHOUE | Portfolio",
   description: "UI/UX Designer Portfolio",
 };
 

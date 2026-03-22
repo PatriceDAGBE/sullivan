@@ -31,7 +31,7 @@ export default function HeroSection() {
     <section className="mt-[170px] sm:mt-[60px] md:mt-[60px]  mb-32">
       <div className="max-w-[950px] min-h-[94px] text-[#6E6E6E]">
         <h1 className="font-geist text-[26px] sm:text-[40px]  md:text-[45px] font-medium leading-[100%] tracking-normal">
-          Hi, I'm <span className="text-[#FFFFFF]">Sullivan ATCHAHOUÉ.</span>
+          Hi, I'm <span className="text-[#FFFFFF]">Sullivan ATCHAHOUE.</span>
           <br />
           I'm{" "}
           <span className="inline-grid">
