@@ -28,10 +28,10 @@ export default function HeroSection() {
   const isDesigner = currentWord === "UI/UX Designer.";
 
   return (
-    <section className="mt-[60px] mb-32">
+    <section className="mt-[170px] sm:mt-[60px] md:mt-[60px]  mb-32">
       <div className="max-w-[950px] min-h-[94px] text-[#6E6E6E]">
-        <h1 className="font-geist text-[26px] sm:text-[28px] md:text-[64px] font-medium leading-[100%] tracking-normal">
-          Hi, I'm <span className="text-[#FFFFFF] font-medium">Sullivan ATCHAHOUÉ.</span>
+        <h1 className="font-geist text-[26px] sm:text-[40px]  md:text-[45px] font-medium leading-[100%] tracking-normal">
+          Hi, I'm <span className="text-[#FFFFFF]">Sullivan ATCHAHOUÉ.</span>
           <br />
           I'm{" "}
           <span className="inline-grid">
@@ -42,7 +42,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, ease: "linear" }}
-                className={`font-medium col-start-1 row-start-1 ${
+                className={`col-start-1 row-start-1 ${
                   isDesigner ? "text-[#FFFFFF]" : "text-[#6E6E6E]"
                 }`}
               >
