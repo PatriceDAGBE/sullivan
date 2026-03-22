@@ -1,4 +1,5 @@
 import {Project} from "@/data/projects";
+import ArrowLabel from "@/components/ArrowLabel";
 
 export default async function DetailsContentPage({ slug, project }: { slug: string, project: Project }) {
   return (
@@ -117,26 +118,44 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
           </div>
 
           {project.wireframesImages && project.wireframesImages.length > 0 && (
-            <div className="mt-16">
-              <div className="flex flex-wrap gap-6 justify-center">
-                {project.wireframesImages.map((img, i) => (
-                  <img key={i} src={img} alt={`wireframe-${i}`} className="rounded-xl object-cover" />
-                ))}
+              <div className="mt-16">
+                <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
+                  {project.wireframesImages.map((img, i) => (
+                    <img key={i} src={img} alt={`wireframe-${i}`} className="rounded-xl object-cover w-full sm:w-auto" />
+                  ))}
+                </div>
+                <div className="flex justify-center mt-4">
+                  <ArrowLabel label={project.wireframesLabel || "Wireframes"} />
+                </div>
               </div>
-              <p className="text-center text-white/40 text-sm italic mt-4">Wireframes</p>
-            </div>
           )}
 
-          {project.prototypeImages && project.prototypeImages.length > 0 && (
-            <div className="mt-16">
-              <div className="flex flex-wrap gap-6 justify-center">
-                {project.prototypeImages.map((img, i) => (
-                  <img key={i} src={img} alt={`prototype-${i}`} className="rounded-xl object-cover" />
-                ))}
+          {project.prototypeImages && project.prototypeImages.length > 0 && project.prototypeType !== "video" && (
+              <div className="mt-16">
+                <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
+                  {project.prototypeImages.map((img, i) => (
+                    <img key={i} src={img} alt={`prototype-${i}`} className="rounded-xl object-cover w-full sm:w-auto" />
+                  ))}
+                </div>
+                <div className="flex justify-center mt-4">
+                  <ArrowLabel label={project.prototypeLabel || "Prototype"} />
+                </div>
               </div>
-              <p className="text-center text-white/40 text-sm italic mt-4">Prototype</p>
-            </div>
           )}
+
+            {/* Prototype vidéo */}
+            {project.prototypeType === "video" && project.prototypeVideo && (
+              <div className="mt-16 w-full bg-black overflow-hidden flex items-center justify-center py-16 sm:py-24">
+                <video
+                  src={project.prototypeVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-[500px] sm:h-[600px] w-auto object-contain rounded-2xl"
+                />
+              </div>
+            )}
         </section>
       )}
 

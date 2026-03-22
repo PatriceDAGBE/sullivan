@@ -19,7 +19,11 @@ export type Project = {
     description: string;
   }[];
   wireframesImages?: string[];
+  prototypeType?: "image" | "video";
+  prototypeVideo?: string; // chemin vers la vidéo
   prototypeImages?: string[];
+   wireframesLabel?: string;
+  prototypeLabel?: string;
 };
 
 export const projects: Project[] = [
@@ -47,6 +51,7 @@ export const projects: Project[] = [
     ],
     wireframesImages: ["/ressourses/momo_wireframes.png"],
     prototypeImages: ["/ressourses/momo_prototype.png"],
+    wireframesLabel: "Wireframes",
   },
   {
     slug: "medi-reminder",
@@ -71,7 +76,9 @@ export const projects: Project[] = [
         { label: "Improved medication adherence", description: "The solution helps patients follow their treatment more consistently." },
     ],
     wireframesImages: ["/ressourses/medi_reminder_wireframes.png"],
-    prototypeImages: ["/ressourses/medi_reminder_prototype.png"],
+    prototypeType: "video",
+    prototypeVideo: "/ressourses/medi_reminder_prototype.png",
+    wireframesLabel: "Some pages of the application",
   },
   {
     slug: "secure-box",
