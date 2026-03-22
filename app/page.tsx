@@ -1,5 +1,3 @@
-import ProjectCard from '@/components/ProjectCard';
-import HeroSection from "@/components/Hero";
 import Hero from "@/components/Hero";
 import SelectedWorksSection from "@/components/SelectedWorksSection";
 

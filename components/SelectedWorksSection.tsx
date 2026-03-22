@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from "@/components/ProjectCard";
+import Link from "next/link";
 
 const SelectedWorksSection = () => {
     return (
@@ -12,10 +13,10 @@ const SelectedWorksSection = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ProjectCard title="MoMo" category="Reconstruction of MoMo’s journey" image="/ressourses/momo.png" />
-            <ProjectCard title="Medi Reminder" category="Mobile App" image="/ressourses/medi_reminder.png" />
-            <ProjectCard title="Secure Box from Secure Destination " category="Born for locker" image="/ressourses/secure_box.png" />
-            <ProjectCard title="Beyond The Gate" category="Immersive Experiences  " image="/ressourses/beyond_the_gate.png" />
+              <Link href="/projects/momo"><ProjectCard title="MoMo" category="Reconstruction of MoMo's journey" image="/ressourses/momo.png" /></Link>
+              <Link href="/projects/medi-reminder"><ProjectCard title="Medi Reminder" category="Mobile App" image="/ressourses/medi_reminder.png" /></Link>
+              <Link href="/projects/secure-box"><ProjectCard title="Secure Box from Secure Destination" category="Born for locker" image="/ressourses/secure_box.png" /></Link>
+              <Link href="/projects/beyond-the-gate"><ProjectCard title="Beyond The Gate" category="Immersive Experiences" image="/ressourses/beyond_the_gate.png" /></Link>
           </div>
 
           <div className="pt-10 pb-2">
