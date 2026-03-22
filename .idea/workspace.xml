@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8828de0b-de53-4431-bd41-e9debc6a2ba5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/projects/[slug]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/DetailsContentPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProjectsPageHero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SeeOther.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/projects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BeforeFooter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SelectedWorksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SelectedWorksSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ressourses/Rectangle 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressourses/momo_flow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ressourses/image 32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressourses/momo_audit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/projects/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/projects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/projects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ressourses/Group 28.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressourses/momo_wireframes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ressourses/iPhone 13 Pro.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressourses/momo_prototype.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ressourses/image 30.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressourses/medi_reminder_flow.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <workItem from="1773739214470" duration="10595000" />
       <workItem from="1773769759949" duration="8043000" />
       <workItem from="1774176073178" duration="1962000" />
-      <workItem from="1774178363791" duration="18962000" />
+      <workItem from="1774178363791" duration="20063000" />
     </task>
     <servers />
   </component>

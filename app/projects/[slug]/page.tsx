@@ -2,6 +2,7 @@ import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import ProjectsPageHero from "@/components/ProjectsPageHero";
 import DetailsContentPage from "@/components/DetailsContentPage";
+import BeforeFooter from "@/components/BeforeFooter";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -17,6 +18,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       {/* Details  Content*/}
       <DetailsContentPage slug={slug} project={project} />
 
+      {/* Before Footer */}
+      <BeforeFooter />
 
     </main>
   );

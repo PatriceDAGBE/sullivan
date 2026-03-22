@@ -64,7 +64,7 @@ export const projects: Project[] = [
       { label: "Lack of monitoring", description: "Caregivers often have no way to know if medication has been taken." },
       { label: "Need for simple reminders", description: "Users require clear and reliable reminder systems integrated into their daily routines." },
     ],
-    findingImages: ["/ressourses/medi_reminder_flow.png", "/ressourses/medi_reminder_audit.png"],
+    findingImages: ["/ressourses/medi_reminder_flow.png"],
     keyResults: [
         { label: "Smart reminder system", description: "The application sends notifications before medication time." },
         { label: "Connected smart box", description: "If medication is not taken, the system sends a notification to a trusted contact." },
