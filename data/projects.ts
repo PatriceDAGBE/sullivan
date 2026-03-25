@@ -1,5 +1,6 @@
 export type Project = {
   slug: string;
+  abrev?: string;
   title: string;
   category: string;
   image: string;
@@ -33,6 +34,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "momo",
+    abrev: "MOMO",
     title: "MOMO Algorithm Reconstruction",
     category: "Reconstruction of MoMo's journey",
     image: "/ressourses/momo.png",
@@ -59,13 +61,14 @@ export const projects: Project[] = [
   },
   {
     slug: "medi-reminder",
+    abrev: "Medi Reminder",
     title: "Medi Reminder",
     category: "Mobile App",
     image: "/ressourses/medi_reminder.png",
     image_big: "/ressourses/medi_reminder_grand.png",
     client: "None",
     year: "2024",
-    projectType: "UX/UI",
+    projectType: "Product Design",
     background: "Medi Reminder is a digital health project designed to help patients remember to take their medication on time.",
     challenge: "Medication adherence is a major challenge for many patients, especially elderly individuals or people managing multiple treatments.",
     keyFindings: [
@@ -86,6 +89,7 @@ export const projects: Project[] = [
   },
   {
     slug: "secure-box",
+    abrev: "Secure Box",
     title: "Secure Box from Secure Destination",
     category: "Born for locker",
     image: "/ressourses/secure_box.png",
@@ -111,13 +115,14 @@ export const projects: Project[] = [
   },
   {
     slug: "beyond-the-gate",
+    abrev: "Beyond The Gate",
     title: "Beyond The Gate",
     category: "Immersive Experiences",
     image: "/ressourses/beyond_the_gate.png",
     image_big: "/ressourses/beyond_the_gate_grand.png",
-    client: "Personal",
-    year: "2024",
-    projectType: "UX/UI",
+    client: "Galerie Borna SOGLO",
+    year: "2025",
+    projectType: "UI/Interactive Experience",
     background: "Beyond the Gate is an interactive UI project that reinterprets the memorial journey of Ouidah 92. The project aims to transform historical memory into an immersive digital experience.",
     challenge: "The challenge was to design an interface capable of conveying the emotional and historical depth of the site while creating an engaging and interactive experience for visitors.",
     keyFindings: [

@@ -16,7 +16,7 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
       {(project.background || project.challenge) && (
         <section className="mb-24 flex flex-col gap-16">
           {project.background && (
-            <FadeInOnScroll>
+            <FadeInOnScroll delay={150}>
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
                   <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
                     Background
@@ -28,7 +28,7 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
             </FadeInOnScroll>
           )}
           {project.challenge && (
-              <FadeInOnScroll>
+              <FadeInOnScroll delay={150}>
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
                   <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
                     Challenge
@@ -45,12 +45,14 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
       {/* Key Findings */}
       {project.keyFindings && project.keyFindings.length > 0 && (
         <section className="mb-24">
-          <h2 className="font-geist font-medium text-[60px] leading-[1.1] text-white mb-16">
-            Key finding
-          </h2>
+          <FadeInOnScroll delay={100}>
+              <h2 className="font-geist font-medium text-[60px] leading-[1.1] text-white mb-16">
+                Key finding
+              </h2>
+          </FadeInOnScroll>
           <div className="flex flex-col gap-16">
             {project.keyFindings.map((finding, i) => (
-              <FadeInOnScroll key={i} delay={i * 100}>
+              <FadeInOnScroll key={i} delay={i * 150}>
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
                   <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
                     {finding.label}
@@ -126,12 +128,14 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
       {/* Key Results */}
       {project.keyResults && project.keyResults.length > 0 && (
         <section className="mb-24">
-          <h2 className="font-geist font-medium text-[60px] leading-[1.1] text-white mb-16">
-            Key results
-          </h2>
+          <FadeInOnScroll delay={100}>
+              <h2 className="font-geist font-medium text-[60px] leading-[1.1] text-white mb-16">
+                Key results
+              </h2>
+          </FadeInOnScroll>
           <div className="flex flex-col gap-16">
             {project.keyResults.map((result, i) => (
-              <FadeInOnScroll key={i} delay={i * 100}>
+              <FadeInOnScroll key={i} delay={i * 150}>
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
                   <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
                     {result.label}

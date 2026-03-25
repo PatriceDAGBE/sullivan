@@ -1,16 +1,21 @@
-// components/FadeInOnScroll.tsx
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-export default function FadeInOnScroll({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
+interface FadeInOnScrollProps {
+  children: React.ReactNode;
+  delay?: number;
+  key?: React.Key;
+}
+
+export default function FadeInOnScroll({ children, delay = 0 }: FadeInOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.15 }
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.1, rootMargin: "-20px 0px" }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -20,10 +25,13 @@ export default function FadeInOnScroll({ children, delay = 0 }: { children: Reac
     <div
       ref={ref}
       style={{
-        transitionDelay: `${delay}ms`,
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(24px)",
-        transition: "opacity 0.6s ease, transform 0.6s ease",
+        transform: visible ? "translateY(0)" : "translateY(50px)",
+        transitionProperty: "opacity, transform",
+        transitionDuration: "800ms",
+        transitionTimingFunction: "cubic-bezier(0.33, 1, 0.68, 1)",
+        transitionDelay: visible ? `${delay}ms` : "0ms",
+        willChange: "opacity, transform",
       }}
     >
       {children}

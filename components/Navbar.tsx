@@ -28,7 +28,7 @@ export default function Navbar() {
               onClick={() => setOpen(!open)}
               className="flex items-center gap-3 py-4 transition-opacity hover:opacity-70 text-[#f0f0f0] w-full"
             >
-              <Menu className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" strokeWidth={1.5} />
+              <Menu className="w-5 h-5 md:w-6 cursor-pointer md:h-6 flex-shrink-0" strokeWidth={1.5} />
               <span className="text-[16px] sm:text-[18px] md:text-[20px] font-medium leading-none">
                 Menu
               </span>
@@ -43,7 +43,7 @@ export default function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className={`flex items-center justify-between px-4 my-4 text-[#f0f0f0] hover:bg-[#D3AF4A] hover:text-[#6E6E6E] transition-colors duration-200 group `}
+                    className={`flex items-center justify-between px-4 my-4 text-[#f0f0f0] hover:bg-[#D3AF4A] hover:text-[#212121] transition-colors duration-200 group `}
                   >
                     <span className="text-base font-medium">{link.label}</span>
                     <ArrowUpRight className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-all duration-200" strokeWidth={1.5} />
