@@ -14,7 +14,6 @@ export default function SeeOther({ currentSlug }: { currentSlug: string }) {
     backgroundColor: "rgba(110, 110, 110, 0.36)",
     backdropFilter: "blur(42px)",
     WebkitBackdropFilter: "blur(42px)",
-    border: "1px solid",
     borderImage: "radial-gradient(circle, #D8D8D8 0%, transparent 100%) 1, radial-gradient(circle, #D8D8D8 0%, transparent 100%) 1, linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%) 1",
     border: "1px solid rgba(255,255,255,0.15)",
   };
