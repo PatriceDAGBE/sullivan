@@ -11,11 +11,11 @@ export default function SeeOther({ currentSlug }: { currentSlug: string }) {
   const otherProjects = projects.filter((p) => p.slug !== currentSlug);
 
   const glassStyle = {
-    backgroundColor: "rgba(110, 110, 110, 0.36)",
-    backdropFilter: "blur(42px)",
-    WebkitBackdropFilter: "blur(42px)",
+    backgroundColor: "rgba(110, 110, 110, 0.15)",
+    backdropFilter: "blur(20px)",
+    WebkitBackdropFilter: "blur(20px)",
     borderImage: "radial-gradient(circle, #D8D8D8 0%, transparent 100%) 1, radial-gradient(circle, #D8D8D8 0%, transparent 100%) 1, linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%) 1",
-    border: "1px solid rgba(255,255,255,0.15)",
+    border: "1px solid rgba(255,255,255,0.25)",
   };
 
   return (
