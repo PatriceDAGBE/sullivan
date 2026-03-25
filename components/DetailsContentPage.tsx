@@ -1,6 +1,7 @@
 import {Project} from "@/data/projects";
 import ArrowLabel from "@/components/ArrowLabel";
 import ArrowLabelFinding from "@/components/ArrowLabelFinding";
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 export default async function DetailsContentPage({ slug, project }: { slug: string, project: Project }) {
   return (
@@ -15,24 +16,28 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
       {(project.background || project.challenge) && (
         <section className="mb-24 flex flex-col gap-16">
           {project.background && (
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
-              <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
-                Background
-              </p>
-              <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
-                {project.background}
-              </p>
-            </div>
+            <FadeInOnScroll>
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
+                  <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
+                    Background
+                  </p>
+                  <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
+                    {project.background}
+                  </p>
+                </div>
+            </FadeInOnScroll>
           )}
           {project.challenge && (
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
-              <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
-                Challenge
-              </p>
-              <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
-                {project.challenge}
-              </p>
-            </div>
+              <FadeInOnScroll>
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
+                  <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
+                    Challenge
+                  </p>
+                  <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
+                    {project.challenge}
+                  </p>
+                </div>
+              </FadeInOnScroll>
           )}
         </section>
       )}
@@ -45,14 +50,16 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
           </h2>
           <div className="flex flex-col gap-16">
             {project.keyFindings.map((finding, i) => (
-              <div key={i} className="flex flex-col sm:flex-row gap-6 sm:gap-0">
-                <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
-                  {finding.label}
-                </p>
-                <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
-                  {finding.description}
-                </p>
-              </div>
+              <FadeInOnScroll key={i} delay={i * 100}>
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
+                  <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
+                    {finding.label}
+                  </p>
+                  <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
+                    {finding.description}
+                  </p>
+                </div>
+              </FadeInOnScroll>
             ))}
           </div>
 
@@ -124,14 +131,16 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
           </h2>
           <div className="flex flex-col gap-16">
             {project.keyResults.map((result, i) => (
-              <div key={i} className="flex flex-col sm:flex-row gap-6 sm:gap-0">
-                <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
-                  {result.label}
-                </p>
-                <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
-                  {result.description}
-                </p>
-              </div>
+              <FadeInOnScroll key={i} delay={i * 100}>
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-0">
+                  <p className="font-geist font-light text-[20px] text-white/90 w-full sm:w-[40%] shrink-0">
+                    {result.label}
+                  </p>
+                  <p className="font-geist font-light text-[30px] leading-[1.3] text-white/90">
+                    {result.description}
+                  </p>
+                </div>
+              </FadeInOnScroll>
             ))}
           </div>
 
