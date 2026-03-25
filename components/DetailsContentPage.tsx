@@ -170,7 +170,7 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
                   loop
                   muted
                   playsInline
-                  className="h-[500px] sm:h-[600px] md:h-[650px] lg:h-[750px] w-auto object-contain "
+                  className="h-[500px] sm:h-[600px] md:h-[650px] lg:h-[750px] w-auto object-contain"
                 />
               </div>
             )}
