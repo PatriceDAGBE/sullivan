@@ -15,7 +15,6 @@ export default function Navbar() {
   return (
     <>
       <header className="relative top-0 left-0 right-0 z-50 mt-[20px] sm:mt-[40px] md:mt-[60px]
-        /* Padding horizontal progressif */
             px-6 sm:px-12 md:px-[80px] lg:px-[115px]
       ">
         <div className="mx-auto flex justify-between items-start h-[51px]">
