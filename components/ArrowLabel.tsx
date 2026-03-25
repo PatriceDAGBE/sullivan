@@ -1,3 +1,4 @@
+
 export default function ArrowLabel({ label }: { label: string }) {
   return (
     <div className="relative w-[160px] h-[160px]">

@@ -10,17 +10,26 @@ export default function SeeOther({ currentSlug }: { currentSlug: string }) {
 
   const otherProjects = projects.filter((p) => p.slug !== currentSlug);
 
+  const glassStyle = {
+    backgroundColor: "rgba(110, 110, 110, 0.36)",
+    backdropFilter: "blur(42px)",
+    WebkitBackdropFilter: "blur(42px)",
+    border: "1px solid",
+    borderImage: "radial-gradient(circle, #D8D8D8 0%, transparent 100%) 1, radial-gradient(circle, #D8D8D8 0%, transparent 100%) 1, linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%) 1",
+    border: "1px solid rgba(255,255,255,0.15)",
+  };
+
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
+    <div className="fixed bottom-60 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
 
       {/* Pills — visibles quand open */}
       {open && (
         <div className="flex items-center gap-3 flex-wrap justify-center">
           <button
             onClick={() => setOpen(false)}
-            className="w-10 h-10 rounded-xl bg-[#1e1e1e] border border-[#2F2F2F]
-              flex items-center justify-center text-white/70 hover:text-white
-              transition-colors duration-200"
+            style={glassStyle}
+            className="w-10 h-10 rounded-xl flex items-center justify-center
+              text-white/70 hover:text-white transition-colors duration-200"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
               fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -33,9 +42,9 @@ export default function SeeOther({ currentSlug }: { currentSlug: string }) {
             <button
               key={p.slug}
               onClick={() => router.push(`/projects/${p.slug}`)}
-              className="px-4 py-2.5 rounded-xl bg-[#1e1e1e] border border-[#2F2F2F]
-                text-white/70 hover:text-black hover:bg-[#D3AF4A] hover:border-[#D3AF4A]
-                transition-all duration-200 text-sm font-medium whitespace-nowrap"
+              style={glassStyle}
+              className="px-4 py-2.5 rounded-xl text-white/70 hover:text-black
+                hover:bg-[#D3AF4A] transition-all duration-200 text-sm font-medium whitespace-nowrap"
             >
               {p.title}
             </button>
@@ -47,9 +56,9 @@ export default function SeeOther({ currentSlug }: { currentSlug: string }) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
+          style={glassStyle}
           className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl
-            bg-[#1e1e1e] border border-[#2F2F2F] text-white/70 hover:text-white
-            transition-colors duration-200 text-sm font-medium"
+            text-white/70 hover:text-white transition-colors duration-200 text-sm font-medium"
         >
           <span>See other</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"

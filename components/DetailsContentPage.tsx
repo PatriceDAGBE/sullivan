@@ -1,9 +1,10 @@
 import {Project} from "@/data/projects";
 import ArrowLabel from "@/components/ArrowLabel";
+import ArrowLabelFinding from "@/components/ArrowLabelFinding";
 
 export default async function DetailsContentPage({ slug, project }: { slug: string, project: Project }) {
   return (
-    <section className="bg-[#2C2B28] -mx-6 sm:-mx-12 md:-mx-[80px] lg:-mx-[115px] px-6 sm:px-12 md:px-[80px] lg:px-[115px] py-16">
+    <section className="bg-[#2C2B28] -mx-6 sm:-mx-12 md:-mx-[80px] lg:-mx-[115px] px-6 sm:px-12 md:px-[80px] lg:px-[115px] py-4 sm:py-8 md:py-12">
 
       {/* Cover image */}
       <div className="w-full rounded-2xl overflow-hidden border border-[#2F2F2F] mb-24">
@@ -75,14 +76,31 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
                       ))}
                     </div>
 
-                    {/* PC — superposées, identique à l'original */}
+                    {/* PC — superposées */}
                     <div className="relative w-full hidden sm:block h-[550px] md:h-[500px] lg:h-[850px]">
+
+                      {/* Image 1 — haut gauche */}
                       <div className="absolute top-0 left-0 w-[55%] overflow-hidden border border-[#2F2F2F] z-10">
                         <img src={project.findingImages[0]} alt="finding-0" className="w-full h-auto object-cover" />
                       </div>
+                      {/* Flèche à droite de la 1ère image */}
+                      {project.findingLabels?.flow && (
+                        <div className="absolute top-[40%] left-[57%] z-10">
+                          <ArrowLabelFinding label={project.findingLabels.flow} direction="right" />
+                        </div>
+                      )}
+
+                      {/* Image 2 — bas droite */}
                       <div className="absolute bottom-0 md:bottom-16 lg:bottom-16 right-0 w-[55%] overflow-hidden border border-[#2F2F2F] z-20">
                         <img src={project.findingImages[1]} alt="finding-1" className="w-full h-auto object-cover" />
                       </div>
+                      {/* Flèche à gauche de la 2ème image */}
+                      {project.findingLabels?.audit && (
+                        <div className="absolute bottom-[30%] right-[57%] z-20">
+                          <ArrowLabelFinding label={project.findingLabels.audit} direction="left" />
+                        </div>
+                      )}
+
                     </div>
                   </>
                 ) : (
@@ -145,14 +163,14 @@ export default async function DetailsContentPage({ slug, project }: { slug: stri
 
             {/* Prototype vidéo */}
             {project.prototypeType === "video" && project.prototypeVideo && (
-              <div className="mt-16 w-full bg-black overflow-hidden flex items-center justify-center py-16 sm:py-24">
+              <div className="mt-16 w-full bg-black overflow-hidden flex items-center justify-center px-12 py-2 sm:py-4 md:py-12 lg:py-16">
                 <video
                   src={project.prototypeVideo}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="h-[500px] sm:h-[600px] w-auto object-contain rounded-2xl"
+                  className="h-[500px] sm:h-[600px] md:h-[650px] lg:h-[750px] w-auto object-contain "
                 />
               </div>
             )}

@@ -14,6 +14,10 @@ export type Project = {
     description: string;
   }[];
   findingImages?: string[];
+  findingLabels?: {
+    flow?: string;   // label sous la 1ère image
+    audit?: string;  // label sous la 2ème image
+  };
   keyResults?: {
     label: string;
     description: string;
@@ -77,7 +81,7 @@ export const projects: Project[] = [
     ],
     wireframesImages: ["/ressourses/medi_reminder_wireframes.png"],
     prototypeType: "video",
-    prototypeVideo: "/ressourses/medi_reminder_prototype.png",
+    prototypeVideo: "/ressourses/medi_reminder_demo.mov",
     wireframesLabel: "Some pages of the application",
   },
   {
@@ -122,12 +126,16 @@ export const projects: Project[] = [
         { label: "Interactive exploration", description: "Users engage more deeply when they can actively explore historical narratives."},
     ],
     findingImages: ["/ressourses/beyond_the_gate_flow.png", "/ressourses/beyond_the_gate_audit.png"],
+    findingLabels: {
+        flow: "Moodboard/DA of site",
+        audit: "Historical Monuments generated with AI",
+    },
     keyResults: [
         { label: "Immersive interface design", description: "An interactive UI was designed to allow users to explore the memorial journey in a dynamic way."},
         { label: "Enhanced storytelling", description: "The project transforms historical memory into an engaging digital narrative."},
         { label: "International exhibition", description: "The project will be presented at the São Paulo Biennale in Brazil."},
     ],
     prototypeType: "video",
-    prototypeVideo: "/ressourses/beyond_the_gate_demo.png",
+    prototypeVideo: "/ressourses/beyond_the_gate_demo.mov",
   },
 ];
