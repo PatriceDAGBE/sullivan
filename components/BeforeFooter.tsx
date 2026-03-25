@@ -15,7 +15,7 @@ const BeforeFooter = () => {
           <a
             href="#"
             className="group inline-flex items-center gap-2 mt-6 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl
-              border border-[#2F2F2F] hover:border-[#D3AF4A] text-white/70 hover:text-white hover:bg-[#D3AF4A]
+              border border-[#2F2F2F] hover:border-[#D3AF4A] text-white/70 hover:text-black hover:bg-[#D3AF4A]
               transition-colors duration-200 text-base sm:text-lg font-medium"
           >
             <span>Get in touch</span>
