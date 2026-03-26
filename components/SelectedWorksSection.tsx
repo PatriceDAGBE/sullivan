@@ -21,7 +21,7 @@ const SelectedWorksSection = () => {
 
           <div className="pt-10 pb-2">
             <a
-              href="#"
+              href="/works"
               className="group flex items-center justify-center gap-2 w-full py-4 sm:py-5 rounded-2xl
                 text-white/70 hover:text-black transition-all duration-300 ease-out
                 border border-[#2F2F2F] hover:bg-[#D3AF4A] hover:border-[#D3AF4A]
