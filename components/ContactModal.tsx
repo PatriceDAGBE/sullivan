@@ -90,7 +90,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.97 }}
             transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
-            className="fixed inset-0 z-[101] flex items-end sm:items-center justify-center px-4 pb-4 sm:pb-0"
+            className="fixed inset-0 z-[101] flex items-center justify-center px-4"
             onClick={(e) => e.stopPropagation()}
           >
             <div
