@@ -4,6 +4,7 @@ import ScrollIndicator from "@/components/ScrollIndicator";
 import BeforeFooter from "@/components/BeforeFooter";
 import {Project, projects as allProjects} from "@/data/projects";
 import React from "react";
+import Link from "next/link";
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
@@ -110,7 +111,7 @@ export default function WorkPage() {
 
           <div className="grid grid-cols-1 gap-6">
               {allProjects.map((project, i) => (
-                  <ProjectCard key={project.slug} project={project} index={i} />
+                  <Link key={project.slug} href={`/projects/${project.slug}`}><ProjectCard project={project} index={i} /></Link>
               ))}
           </div>
       </section>
