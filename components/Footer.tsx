@@ -12,15 +12,15 @@ export default function Footer() {
           {/* Menu */}
           <div className="flex flex-col gap-2">
             <span className="text-sm font-medium text-white mb-1">Menu</span>
-            <a href="#" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Home</a>
-            <a href="#" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Work</a>
-            <a href="#" className="text-sm text-white/40 hover:text-white transition-colors duration-200">About</a>
+            <a href="/" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Home</a>
+            <a href="/works" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Work</a>
+            <a href="/about" className="text-sm text-white/40 hover:text-white transition-colors duration-200">About</a>
           </div>
 
           {/* Contact */}
           <div className="flex flex-col gap-2">
             <span className="text-sm font-medium text-white mb-1">Contact</span>
-            <a href="#" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Linkedin</a>
+            <a href="https://www.linkedin.com/in/sullivan-atchahoue-7b8a782b1/" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Linkedin</a>
             <a href="#" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Mail</a>
             <a href="#" className="text-sm text-white/40 hover:text-white transition-colors duration-200">Phone</a>
           </div>
